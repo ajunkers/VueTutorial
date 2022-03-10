@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    
+    <title>Expressions</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Online Shop</h1>
+
+        <p v-if="itemsInStock > 10">Stock: {{ itemsInStock }} items</p>
+        <p v-else-if="itemsInStock > 0">Hurry up, there are just a few items left!</p>
+        <p v-else>Too bad, we're all out!</p>
+
+        <template v-if="itemsInStock > 50">
+            <h2>Special offer!</h2>
+            <p>Looks like we have tos of products in stock... Save 20% if you order now!</p>    
+        </template>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

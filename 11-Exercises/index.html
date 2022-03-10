@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    
+    <title>Expressions</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Ex1 -->
+        <input type="text" v-on:keyup="update($event)">
+        <p>Output: {{ text }}</p>
+
+        <br><br>
+
+         <!-- Ex2 -->
+         <input type="text" v-on:keyup.shift.enter="update($event)">
+         <p>Output: {{ text }}</p>
+
+        <br><br>
+
+         <!-- Ex3 -->
+        <form action="" method="get" v-on:submit.prevent>
+            <input type="submit" value="Submit" v-on:click="clickEvent">
+        </form>
+         
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
