@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    
+    <title>Show and Hide</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Ninja Toggle</h1>
+
+        <p v-show="isNinja">Invisible like a Ninja!</p>
+        <p v-show="!isNinja">🐱‍👤</p>
+
+        <button v-on:click="isNinja = !isNinja">Toggle Ninja Skills</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
